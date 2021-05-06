@@ -1,0 +1,9 @@
+#!/bin/sh
+p_server() {
+  TEMP_PORT=$1;
+  if [ ! -n "$1" ] ;then
+    TEMP_PORT=8000
+  fi
+  python3 -m http.server $TEMP_PORT;
+}
+p_server $1
